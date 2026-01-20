@@ -80,7 +80,7 @@ export default function TopBar() {
                     </a>
 
                     <a
-                        href="https://www.instagram.com/manudocs"
+                        href="https://www.instagram.com/manudocs.ai"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white transition"
@@ -90,7 +90,7 @@ export default function TopBar() {
                     </a>
 
                     <a
-                        href="mailto:contact@manudocs.com"
+                        href="mailto: manudocs.ai@gmail.com"
                         className="hover:text-white transition "
                         title="Email"
                     >
@@ -98,7 +98,7 @@ export default function TopBar() {
                     </a>
 
                     <a
-                        href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK"
+                        href="https://chat.whatsapp.com/EeoeVw68M2QJaMR8h9TN7N"
                         target="_blank"
                         rel="noopener noreferrer"
                         title="WhatsApp Community"
