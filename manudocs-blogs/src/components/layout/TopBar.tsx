@@ -7,6 +7,7 @@ import {
     Instagram,
     Mail,
     MessageCircle,
+    Youtube,
 } from "lucide-react";
 
 export default function TopBar() {
@@ -59,6 +60,16 @@ export default function TopBar() {
                     </button>
 
                     {/* SOCIAL ICONS */}
+                    <a
+                        href="https://www.youtube.com/@yourManuDocs"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-white transition"
+                        title="YouTube"
+                    >
+                        <Youtube size={18} />
+                    </a>
+
                     <a
                         href="https://twitter.com/ManuDocs"
                         target="_blank"
