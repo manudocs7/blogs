@@ -2,6 +2,7 @@ import { getAllBlogs, BlogMeta } from "@/lib/getBlogs";
 import type { Metadata } from "next";
 import SearchLatest from "@/components/blog/SearchLatest";
 import TopBar from "@/components/layout/TopBar";
+import { SyncedCarousel } from "@/components/blog/SyncedCarousel";
 
 
 
@@ -37,6 +38,12 @@ export default function BlogHome() {
   const latestBlogs = sortedBlogs
     .filter((b) => !b.excludeFromLatest)
     .slice(0, 50);
+
+  // Carousel blogs by tag
+  const problemBlogs = blogs.filter((b) => b.carouselTag?.startsWith('P'));
+  const solutionBlogs = blogs.filter((b) => b.carouselTag?.startsWith('S'));
+  const impactBlogs = blogs.filter((b) => b.carouselTag?.startsWith('I'));
+  const betterBlogs = blogs.filter((b) => b.carouselTag?.startsWith('B'));
 
   return (
     <>
@@ -118,6 +125,19 @@ export default function BlogHome() {
               ))}
             </div>
           </section>
+        )}
+
+
+        {/* =====================
+          SYNCHRONIZED CAROUSEL SECTION
+      ===================== */}
+        {(problemBlogs.length > 0 || solutionBlogs.length > 0 || impactBlogs.length > 0) && (
+          <SyncedCarousel
+            problemBlogs={problemBlogs}
+            solutionBlogs={solutionBlogs}
+            impactBlogs={impactBlogs}
+            betterBlogs={betterBlogs}
+          />
         )}
 
 

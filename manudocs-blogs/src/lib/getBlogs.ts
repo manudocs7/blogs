@@ -16,6 +16,7 @@ export type BlogMeta = {
 
     category?: string;
     tags?: string[];
+    carouselTag?: string; // P1C1, P1C2, S1C1, S1C2, I1C1, I1C2, etc.
 
     slug: string;
     content: string;
